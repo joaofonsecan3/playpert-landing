@@ -1,10 +1,11 @@
-
+import { Link } from "react-router-dom";
 import { Compass, Star, Sparkles, Orbit } from "lucide-react";
 import StarField from "./StarField";
 
 export default function UniverseSection() {
   return (
     <section
+      id="universo"
       className="py-20 sm:py-28 relative overflow-hidden"
       style={{
         background:
@@ -19,6 +20,7 @@ export default function UniverseSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
+        {/* Header */}
         <div className="text-center mb-16">
           <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 font-semibold text-sm mb-6 border border-white/20">
             <Orbit className="w-4 h-4" />
@@ -45,11 +47,9 @@ export default function UniverseSection() {
 
             {/* Central Planet */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-
               <div className="w-32 h-32 rounded-full bg-gradient-to-br from-[#6A4CFF] to-[#F472B6] shadow-2xl animate-pulse flex items-center justify-center">
                 <Sparkles className="w-14 h-14 text-white" />
               </div>
-
             </div>
 
             {/* Orbit Elements */}
@@ -118,14 +118,16 @@ export default function UniverseSection() {
           </div>
         </div>
 
+        {/* CTA */}
         <div className="text-center">
 
-          <button
+          <Link
+            to="/universo-playpert"
             className="bg-gradient-to-r from-[#F472B6] to-[#6A4CFF] hover:from-[#F472B6] hover:to-[#4F7BFF] text-white font-semibold px-10 py-4 text-lg rounded-full shadow-lg shadow-purple-500/30 hover:shadow-pink-500/40 transition-all duration-300 hover:scale-105 inline-flex items-center justify-center"
           >
             <Compass className="w-5 h-5 mr-2" />
             Explorar a Jornada
-          </button>
+          </Link>
 
         </div>
 

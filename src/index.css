@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* comportamento global */
+html {
+  scroll-behavior: smooth;
+}
+
+/* opcional: remove margem padrão do body */
+body {
+  margin: 0;
+}
