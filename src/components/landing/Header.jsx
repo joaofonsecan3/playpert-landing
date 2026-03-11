@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/Titulo.svg";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,12 +45,17 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          
+
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <span className="text-2xl font-bold text-white tracking-tight">
-              PLAYPERT
-            </span>
+          <div
+            className="flex items-center cursor-pointer"
+            onClick={() => scrollToSection("hero")}
+          >
+            <img
+              src={logo}
+              alt="Playpert"
+              className="h-6 md:h-7 w-auto max-w-[120px] brightness-0 invert"
+            />
           </div>
 
           {/* Desktop Menu */}
