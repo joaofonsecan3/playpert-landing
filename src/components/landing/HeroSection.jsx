@@ -2,6 +2,10 @@ import { Rocket, Sparkles, Star, Zap } from "lucide-react";
 import StarField from "./StarField";
 
 export default function HeroSection() {
+
+  const whatsappLink =
+    "https://wa.me/5587991051094?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20aulas%20da%20Playpert";
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
 
@@ -21,7 +25,6 @@ export default function HeroSection() {
     >
       <StarField count={150} />
 
-      {/* Gradient Orbs */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-[#F472B6] rounded-full blur-[120px] opacity-20 animate-pulse" />
       <div
         className="absolute bottom-20 right-10 w-96 h-96 bg-[#4F7BFF] rounded-full blur-[150px] opacity-20 animate-pulse"
@@ -30,8 +33,7 @@ export default function HeroSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 pt-32 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          
-          {/* Left Content */}
+
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-white/20">
               <Sparkles className="w-4 h-4 text-[#F472B6]" />
@@ -58,26 +60,29 @@ export default function HeroSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              
-              <button
-                onClick={() => scrollToSection("cta")}
+
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-gradient-to-r from-[#F472B6] to-[#6A4CFF] hover:from-[#F472B6] hover:to-[#4F7BFF] text-white font-semibold px-8 py-4 text-lg rounded-full shadow-lg shadow-purple-500/30 hover:shadow-pink-500/40 transition-all duration-300 hover:scale-105 flex items-center justify-center"
               >
                 <Rocket className="w-5 h-5 mr-2" />
                 Preparar meu filho para o futuro
-              </button>
+              </a>
 
-              <button
-                onClick={() => scrollToSection("cta")}
-                className="border-2 border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-4 text-lg rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-white/50"
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-4 text-lg rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-white/50 text-center"
               >
                 Agendar aula experimental
-              </button>
+              </a>
 
             </div>
           </div>
 
-          {/* Right Illustration */}
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative w-80 h-80 sm:w-96 sm:h-96">
 
@@ -122,7 +127,6 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Bottom Wave */}
       <div className="absolute bottom-0 left-0 right-0">
         <svg viewBox="0 0 1440 120" fill="none">
           <path
