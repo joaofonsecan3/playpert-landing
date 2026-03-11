@@ -6,6 +6,9 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const whatsappLink =
+    "https://wa.me/5587991051094?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20aulas%20da%20Playpert";
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -46,7 +49,6 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
 
-          {/* Logo */}
           <div
             className="flex items-center cursor-pointer"
             onClick={() => scrollToSection("hero")}
@@ -58,7 +60,6 @@ export default function Header() {
             />
           </div>
 
-          {/* Desktop Menu */}
           <nav className="hidden md:flex items-center space-x-8">
             {menuItems.map((item) => (
               <button
@@ -73,27 +74,27 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* CTA Button */}
           <div className="hidden md:block">
-            <button
-              onClick={() => scrollToSection("cta")}
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white text-[#6A4CFF] hover:bg-[#F472B6] hover:text-white font-semibold px-6 py-2.5 rounded-full transition-all duration-300 shadow-lg hover:shadow-pink-500/30 hover:scale-105"
             >
               Agendar aula experimental
-            </button>
+            </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden text-white p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
+
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <div
         className={`md:hidden absolute top-full left-0 right-0 bg-[#6A4CFF] overflow-hidden transition-all duration-300 ${
           isMobileMenuOpen ? "max-h-96 shadow-lg" : "max-h-0"
@@ -110,12 +111,14 @@ export default function Header() {
             </button>
           ))}
 
-          <button
-            onClick={() => scrollToSection("cta")}
-            className="bg-white text-[#6A4CFF] hover:bg-[#F472B6] hover:text-white font-semibold rounded-full mt-2 px-6 py-2"
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-[#6A4CFF] hover:bg-[#F472B6] hover:text-white font-semibold rounded-full mt-2 px-6 py-2 text-center"
           >
             Agendar aula experimental
-          </button>
+          </a>
         </nav>
       </div>
     </header>
