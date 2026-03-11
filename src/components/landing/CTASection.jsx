@@ -1,6 +1,9 @@
 import { Rocket, Calendar } from "lucide-react";
 
 export default function CTASection() {
+  const whatsappLink =
+    "https://wa.me/5587991051094?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20aulas%20da%20Playpert";
+
   return (
     <section
       id="cta"
@@ -37,10 +40,15 @@ export default function CTASection() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
 
-          <button className="bg-white text-[#6A4CFF] hover:bg-gray-100 font-semibold px-10 py-6 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 inline-flex items-center justify-center">
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-[#6A4CFF] hover:bg-gray-100 font-semibold px-10 py-6 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 inline-flex items-center justify-center"
+          >
             <Rocket className="w-5 h-5 mr-2" />
             Preparar meu filho para o futuro
-          </button>
+          </a>
 
         </div>
 
