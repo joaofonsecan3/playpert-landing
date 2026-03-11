@@ -43,14 +43,14 @@ export default function HeroSection() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              Tecnologia não deveria apenas{" "}
+              Tecnologia não deve apenas{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F472B6] to-[#4F7BFF]">
                 entreter
               </span>{" "}
               crianças.
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4F7BFF] to-[#F472B6]">
-                Deveria prepará-las para o futuro.
+                Precisa prepará-las para o futuro.
               </span>
             </h1>
 
