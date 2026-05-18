@@ -2,7 +2,7 @@ import { Rocket, Calendar } from "lucide-react";
 
 export default function CTASection() {
 const whatsappLink =
-  "https://wa.me/5587999999999?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20aulas%20da%20Playpert";
+  "https://wa.me/5511932377807?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20aulas%20da%20Playpert";
 
   return (
     <section
