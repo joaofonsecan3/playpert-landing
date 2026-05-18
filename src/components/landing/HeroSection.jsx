@@ -3,8 +3,8 @@ import StarField from "./StarField";
 
 export default function HeroSection() {
 
-  const whatsappLink =
-    "https://wa.me/5587991051094?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20aulas%20da%20Playpert";
+const whatsappLink =
+  "https://wa.me/5587999999999?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20aulas%20da%20Playpert";
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
